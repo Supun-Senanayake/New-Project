@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.MaindashController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="6.0" prefHeight="635.0" prefWidth="236.0" style="-fx-background-color: #e7e6e6; -fx-background-radius: 15;">
+         <children>
+            <Button layoutX="38.0" layoutY="216.0" mnemonicParsing="false" onAction="#DashbordbtnOnAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #faa03d; -fx-background-position: 12;" text="Dashbord " />
+            <Button layoutX="38.0" layoutY="266.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #f88920;" text="Hot Delishoes " />
+            <Button layoutX="38.0" layoutY="318.0" mnemonicParsing="false" onAction="#OrderbtnOnAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #e9690d;" text="Orders " />
+            <Button layoutX="38.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #c14f0d;" text="Customer " />
+            <Button layoutX="38.0" layoutY="419.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #c14f0d;" text="Employee" />
+            <Button layoutX="46.0" layoutY="560.0" mnemonicParsing="false" onAction="#logoutbtnOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-radius: 20; -fx-background-color: #c14f0d;" text="LOG OUT " textFill="WHITE" />
+            <ImageView fitHeight="198.0" fitWidth="212.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/restuarent%20logo%20.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="50.0" layoutY="483.0" mnemonicParsing="false" onAction="#btnFoodpannelOnAction" prefHeight="25.0" prefWidth="117.0" text="Foods Pannel " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="251.0" layoutY="14.0" prefHeight="64.0" prefWidth="1041.0" style="-fx-background-radius: 20; -fx-background-color: #e7e6e6;">
+         <children>
+            <Label layoutX="800.0" layoutY="20.0" text="Wellcome Admin ! ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="968.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Circle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="23.0" layoutX="975.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MainPane" layoutX="257.0" layoutY="83.0" prefHeight="558.0" prefWidth="1031.0" style="-fx-background-radius: 20; -fx-background-color: #e7e6e6;">
+         <children>
+            <Pane layoutX="10.0" layoutY="13.0" prefHeight="248.0" prefWidth="1009.0" style="-fx-background-radius: 30; -fx-background-color: #f6f5f5;">
+               <children>
+                  <Pane layoutX="46.0" layoutY="57.0" prefHeight="172.0" prefWidth="246.0" style="-fx-background-color: #ff8f32; -fx-background-radius: 20;">
+                     <children>
+                        <Label layoutX="51.0" layoutY="29.0" text="Total Income ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="96.0" layoutY="89.0" text="0.00">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="46.0" layoutY="14.0" text="Today Data ">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="370.0" layoutY="57.0" prefHeight="172.0" prefWidth="246.0" style="-fx-background-color: #ff6f0a; -fx-background-radius: 20;">
+                     <children>
+                        <Label layoutX="51.0" layoutY="29.0" text="Total Orders  ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="96.0" layoutY="89.0" text="0.00">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="704.0" layoutY="57.0" prefHeight="172.0" prefWidth="246.0" style="-fx-background-color: #ff5500; -fx-background-radius: 20;">
+                     <children>
+                        <Label layoutX="51.0" layoutY="29.0" text="Total Customer  ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="96.0" layoutY="89.0" text="0.00">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="15.0" layoutY="279.0" prefHeight="268.0" prefWidth="1000.0" style="-fx-background-radius: 30; -fx-background-color: #f6f5f5;">
+               <children>
+                  <BarChart layoutX="47.0" layoutY="17.0" prefHeight="237.0" prefWidth="477.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label layoutX="594.0" layoutY="26.0" prefHeight="38.0" prefWidth="236.0" text="Analyzed Income ">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="588.0" layoutY="76.0" prefHeight="172.0" prefWidth="266.0" style="-fx-background-color: #cc3b02; -fx-background-radius: 20;">
+                     <children>
+                        <Label layoutX="42.0" layoutY="29.0" text="Most Sale Foods " textFill="#f5f5f5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="111.0" layoutY="79.0" text="0.00" textFill="#fffafa">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

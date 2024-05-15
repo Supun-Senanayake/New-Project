@@ -1,0 +1,6 @@
+.textField{
+   -fx-border: 2px solid red;
+    -fx-color: black;
+    -fx-font-weight: bold;
+
+}

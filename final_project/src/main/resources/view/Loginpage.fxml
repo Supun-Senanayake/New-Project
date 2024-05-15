@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="407.0" prefWidth="581.0" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LoginpageController">
+   <children>
+      <ImageView fitHeight="413.0" fitWidth="588.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/loginpagebackground.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="277.0" layoutY="83.0" prefHeight="31.0" prefWidth="146.0" text="LOGIN PAGE ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="281.0" layoutY="162.0" promptText="Enter User Name" />
+      <Label layoutX="281.0" layoutY="140.0" text="User Name " />
+      <Label layoutX="284.0" layoutY="203.0" text="Password" />
+      <Hyperlink layoutX="281.0" layoutY="245.0" prefHeight="23.0" prefWidth="149.0" text="Froget Password ? " textFill="#0a0a0a">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="277.0" mnemonicParsing="false" onAction="#butnLoginOnAction" opacity="0.95" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: #FFBD59;" text="LOGIN" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="214.0" fitWidth="271.0" layoutX="45.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
+      <Label fx:id="LoginMassegeLabel" layoutX="280.0" layoutY="310.0" text="Invalid Login plese try again .." textFill="#dd1010" />
+      <Button layoutX="318.0" layoutY="341.0" mnemonicParsing="false" onAction="#CanclebtnOnaction" text="cancle" />
+      <PasswordField fx:id="txtPassword" layoutX="281.0" layoutY="220.0" promptText="Enter Password" />
+   </children>
+</fx:root>

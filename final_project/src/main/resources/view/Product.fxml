@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="invontry_form" prefHeight="546.0" prefWidth="794.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ProductController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="282.0" prefWidth="785.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="inventory_tableview" layoutX="29.0" layoutY="21.0" onMouseClicked="#inventorySelectData" prefHeight="246.0" prefWidth="754.0">
+              <columns>
+                <TableColumn fx:id="inventory_col_idproduct" prefWidth="75.0" text="ID Product " />
+                <TableColumn fx:id="inventory_col_productname" prefWidth="128.0" text="Product Name " />
+                  <TableColumn fx:id="inventory_col_type" text="Type " />
+                  <TableColumn fx:id="inventory_col_stock" prefWidth="92.0" text="Stock " />
+                  <TableColumn minWidth="0.0" prefWidth="0.0" />
+                  <TableColumn fx:id="inventory_col_price" prefWidth="75.0" text="Price " />
+                  <TableColumn fx:id="inventory_col_statuse" prefWidth="151.0" text="Status" />
+                  <TableColumn fx:id="inventory_col_date" prefWidth="151.0" text="Date " />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" layoutY="297.0" prefHeight="246.0" prefWidth="785.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="588.0" layoutY="18.0" prefHeight="139.0" prefWidth="130.0" style="-fx-background-color: black;">
+               <children>
+                  <ImageView fx:id="inventory_imageview" fitHeight="139.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="40.0" layoutY="28.0" text="Id product " />
+            <TextField fx:id="inventory_idproduct" layoutX="115.0" layoutY="24.0" />
+            <Label layoutX="40.0" layoutY="79.0" text="Product Name " />
+            <TextField fx:id="inventory_productName" layoutX="120.0" layoutY="75.0" />
+            <ComboBox fx:id="inventory_type" layoutX="120.0" layoutY="123.0" prefWidth="150.0" promptText="Choos type" />
+            <Label layoutX="63.0" layoutY="130.0" text="Type " />
+            <TextField fx:id="inventory_productStock" layoutX="121.0" layoutY="174.0" />
+            <Label layoutX="66.0" layoutY="178.0" text="Stock " />
+            <Label layoutX="66.0" layoutY="215.0" text="Price ($)" />
+            <TextField fx:id="inventory_productPrice" layoutX="121.0" layoutY="211.0" />
+            <Button layoutX="634.0" layoutY="162.0" mnemonicParsing="false" onAction="#inventoryimportbtnOnAction" text="import " />
+            <Button fx:id="inventory_addbtn" layoutX="367.0" layoutY="203.0" mnemonicParsing="false" onAction="#inventoryAddbtnOnAction" prefHeight="25.0" prefWidth="55.0" text="ADD" />
+            <Button fx:id="inventory_clearbtn" layoutX="558.0" layoutY="203.0" mnemonicParsing="false" onAction="#inventoryClearbtnOnAction" prefHeight="25.0" prefWidth="59.0" text="Clear " />
+            <Button fx:id="inventory_updatebtn" layoutX="449.0" layoutY="203.0" mnemonicParsing="false" onAction="#inventoryUpdatebtnOnAction" prefHeight="25.0" prefWidth="80.0" text="Update " />
+            <Button fx:id="inventory_deletebtn" layoutX="643.0" layoutY="203.0" mnemonicParsing="false" onAction="#inventoryDeletebtnOnAction" prefHeight="25.0" prefWidth="55.0" text="Delete " />
+            <ComboBox fx:id="inventory_Statuse" layoutX="399.0" layoutY="33.0" prefHeight="25.0" prefWidth="136.0" promptText="Choose Statuse " />
+            <Label layoutX="353.0" layoutY="41.0" text="Statuse" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

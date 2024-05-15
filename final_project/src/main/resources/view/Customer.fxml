@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="558.0" prefWidth="1031.0" style="-fx-background-color: white; -fx-background-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.CustomerController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="784.0">
+         <children>
+            <AnchorPane fx:id="roos" layoutX="-9.0" layoutY="-9.0" prefHeight="558.0" prefWidth="1031.0">
+               <children>
+                  <Pane layoutY="56.0" prefHeight="504.0" prefWidth="1031.0" style="-fx-background-color: white;">
+                     <children>
+                        <TextField fx:id="txtName" alignment="CENTER" layoutX="31.0" layoutY="124.0" prefHeight="25.0" prefWidth="213.0" promptText="Enter Name " styleClass="textField" stylesheets="@../assets/customer.css" />
+                        <Text fill="WHITE" layoutX="29.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="111.98046875">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtAddress" alignment="CENTER" layoutX="289.0" layoutY="172.0" prefHeight="25.0" prefWidth="248.0" promptText="Enter Address" styleClass="textField" stylesheets="@../assets/customer.css" />
+                        <Text fill="WHITE" layoutX="31.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="111.98046875">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtContact" alignment="CENTER" layoutX="292.0" layoutY="124.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="241.0" promptText="Enter Contact Number">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                        <Text fill="WHITE" layoutX="31.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIC" wrappingWidth="111.98046875">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtnic" alignment="CENTER" layoutX="30.0" layoutY="171.0" prefHeight="25.0" prefWidth="219.0" promptText="Enter NIC Number" />
+                        <ButtonBar layoutX="540.0" layoutY="184.0" prefHeight="40.0" prefWidth="421.0">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#btnSaveOnAction" style="-fx-background-color: #ff8f32;" text="Save ">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#btnUpdateOnAction" style="-fx-background-color: #ff8f32;" text="Update " />
+                              <Button mnemonicParsing="false" onAction="#btnDeleteOnAction" style="-fx-background-color: #ff8f32;" text="Delete " />
+                              <Button mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: #ff8f32;" text="Print " />
+                           </buttons>
+                        </ButtonBar>
+                        <TableView fx:id="tblCustomer" layoutX="31.0" layoutY="237.0" prefHeight="253.0" prefWidth="834.0">
+                           <columns>
+                              <TableColumn fx:id="colName" prefWidth="157.0" text="Name " />
+                              <TableColumn fx:id="colAddress" prefWidth="187.0" text="Address" />
+                              <TableColumn fx:id="colContact" prefWidth="224.0" text="Contact " />
+                              <TableColumn fx:id="colnic" prefWidth="265.0" text="NIC" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="txtNumber" alignment="TOP_LEFT" layoutX="29.0" layoutY="45.0" onAction="#txtNumbersearchOnAction" prefHeight="40.0" prefWidth="352.0" promptText="Search Customer ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="58.0" prefWidth="1038.0" style="-fx-background-color: #ff5500; -fx-background-radius: 20;">
+                     <children>
+                        <Label layoutX="40.0" layoutY="14.0" prefHeight="30.0" prefWidth="342.0" text="About This Customer " textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
